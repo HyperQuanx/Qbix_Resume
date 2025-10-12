@@ -11,7 +11,8 @@
 .resume-container {
   /* A4 크기: 210mm x 297mm */
   width: 210mm;
-  min-height: 297mm;
+  height: 297mm;
+  overflow: hidden;
 
   /* PDF 출력용 설정 */
   background-color: white;
@@ -29,6 +30,11 @@
   /* 페이지 브레이크 설정 */
   page-break-after: always;
   break-after: page;
+
+  /* PDF 출력 시 배경색 유지 */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .resume-container:last-child {
@@ -40,21 +46,33 @@
   flex: 1;
   background-color: #4682c2;
   color: white;
-  padding: 40px 30px;
+  padding: 15px 30px;
   display: flex;
   flex-direction: column;
   gap: 0;
-  min-height: 297mm;
+  height: 100%;
+  overflow: hidden;
+
+  /* PDF 출력 시 배경색 유지 */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .right-section {
   flex: 2;
-  padding: 40px 50px;
+  padding: 15px 50px;
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   gap: 0;
-  min-height: 297mm;
+  height: 100%;
+  overflow: hidden;
+
+  /* PDF 출력 시 배경색 유지 */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 /* 왼쪽 섹션 - 프로필 */
@@ -89,7 +107,7 @@
 
 .info-section:nth-child(2) {
   /* 기본사항 */
-  height: 160px;
+  height: 130px;
 }
 
 .info-section:nth-child(3) {
@@ -99,7 +117,7 @@
 
 .info-section:nth-child(4) {
   /* 보유자격증 */
-  height: 140px;
+  height: 130px;
 }
 
 .info-section:nth-child(5) {
@@ -109,12 +127,12 @@
 
 .info-section:nth-child(6) {
   /* 경력사항 */
-  height: 100px;
+  height: 84px;
 }
 
 .info-section:nth-child(7) {
   /* 보유기술 */
-  height: 200px;
+  height: 180px;
   border-bottom: none;
 }
 
@@ -155,7 +173,7 @@
 
 /* 연락처 정보 */
 .contact-info {
-  height: 160px;
+  height: 130px;
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
   display: flex;
@@ -192,7 +210,7 @@
 
 .right-section > .content-section:nth-child(4) {
   /* 보유자격증 - 4번째 자식 */
-  height: 140px;
+  height: 130px;
 }
 
 .right-section > .content-section:nth-child(5) {
@@ -202,12 +220,12 @@
 
 .right-section > .content-section:nth-child(6) {
   /* 경력사항 - 6번째 자식 */
-  height: 100px;
+  height: 84px;
 }
 
 .right-section > .content-section:nth-child(7) {
   /* 보유기술 - 7번째 자식 */
-  height: 200px;
+  height: 180px;
   border-bottom: none;
 }
 
@@ -259,10 +277,192 @@
   margin-bottom: 0;
 }
 
-/* 경력사항 */
+/* 기술스택 */
+.skill-item {
+  margin-bottom: 10px;
+}
+
+.skill-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skill-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+}
+
+.project-info-section {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.project-info-section .subtitle {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.project-info-section h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.project-item {
+  font-size: 14px;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.project-item a:visited {
+  color: black;
+}
+
+.project-item-skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.project-item-skill-container .project-item-skill {
+  background-color: #4682c2;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.project-item .project-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-item-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.project-info-section:nth-child(1) {
+  /* 프로젝트명 */
+  height: 70px;
+  border-top: none;
+}
+
+.project-info-section:nth-child(2) {
+  /* 작업기간 */
+  height: 70px;
+}
+
+.project-info-section:nth-child(3) {
+  /* 인력구성 */
+  height: 100px;
+}
+
+.project-info-section:nth-child(4) {
+  /* 프로젝트 목적 */
+  height: 100px;
+}
+
+.project-info-section:nth-child(5) {
+  /* 주요 업무 및 상세역할 */
+  height: 280px;
+}
+
+.project-info-section:nth-child(6) {
+  /* 사용 기술 스택 */
+  height: 170px;
+}
+
+.project-info-section:nth-child(7) {
+  /* 프로젝트 결과 */
+  height: 170px;
+}
+
+.project-info-section:nth-child(8) {
+  /* 참고자료 */
+  height: 120px;
+  border-bottom: none;
+}
+
+.project-content-section {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.right-section > .project-content-section:nth-child(1) {
+  /* 프로젝트명 */
+  border-top: none;
+  height: 70px;
+}
+
+.right-section > .project-content-section:nth-child(2) {
+  /* 작업기간 */
+  height: 70px;
+}
+
+.right-section > .project-content-section:nth-child(3) {
+  /* 인력구성 */
+  height: 100px;
+}
+
+.right-section > .project-content-section:nth-child(4) {
+  /* 프로젝트 목적 */
+  height: 100px;
+}
+
+.right-section > .project-content-section:nth-child(5) {
+  /* 주요 업무 및 상세역할 */
+  height: 280px;
+}
+
+.right-section > .project-content-section:nth-child(6) {
+  /* 사용 기술 스택 */
+  height: 170px;
+}
+
+.right-section > .project-content-section:nth-child(7) {
+  /* 프로젝트 결과 */
+  height: 170px;
+}
+
+.right-section > .project-content-section:nth-child(8) {
+  /* 참고자료 */
+  height: 120px;
+  border-bottom: none;
+}
 
 /* 프린트/PDF 저장 시 설정 */
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
   #root {
     padding: 0;
     background-color: white;
@@ -277,11 +477,17 @@
     border: none;
     page-break-after: always;
     break-after: page;
+    overflow: hidden;
   }
 
   .resume-container:last-child {
     page-break-after: auto;
     break-after: auto;
+  }
+
+  .left-section,
+  .right-section {
+    overflow: hidden;
   }
 }
 
