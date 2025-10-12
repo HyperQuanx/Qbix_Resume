@@ -495,3 +495,205 @@
   size: A4;
   margin: 0;
 }
+
+/* 모바일 반응형 (768px 이하)  여기부터 추가함 */
+@media screen and (max-width: 768px) {
+  #root {
+    padding: 0;
+    gap: 0;
+  }
+
+  .resume-container {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    flex-direction: column;
+    overflow: visible;
+    border: none;
+    box-shadow: none;
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .left-section {
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    overflow: visible;
+  }
+
+  .right-section {
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    overflow: visible;
+  }
+
+  /* 프로필 섹션 */
+  .profile-section {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* 정보 섹션 */
+  .info-section,
+  .info-section:nth-child(2),
+  .info-section:nth-child(3),
+  .info-section:nth-child(4),
+  .info-section:nth-child(5),
+  .info-section:nth-child(6),
+  .info-section:nth-child(7) {
+    height: auto !important;
+    padding: 15px 0;
+  }
+
+  .info-section h3 {
+    font-size: 18px;
+  }
+
+  .info-section .subtitle {
+    font-size: 11px;
+  }
+
+  /* 프로젝트 정보 섹션 */
+  .project-info-section,
+  .project-info-section:nth-child(1),
+  .project-info-section:nth-child(2),
+  .project-info-section:nth-child(3),
+  .project-info-section:nth-child(4),
+  .project-info-section:nth-child(5),
+  .project-info-section:nth-child(6),
+  .project-info-section:nth-child(7),
+  .project-info-section:nth-child(8) {
+    height: auto !important;
+    padding: 15px 0;
+  }
+
+  .project-info-section h3 {
+    font-size: 18px;
+  }
+
+  .project-info-section .subtitle {
+    font-size: 11px;
+  }
+
+  /* 헤더 텍스트 */
+  .header-text {
+    height: auto !important;
+    padding: 20px 0;
+  }
+
+  .header-text .name {
+    font-size: 28px;
+  }
+
+  .header-text .small-text {
+    font-size: 13px;
+  }
+
+  /* 연락처 정보 */
+  .contact-info {
+    height: auto !important;
+    padding: 15px 0;
+  }
+
+  .contact-item {
+    font-size: 13px;
+  }
+
+  /* 컨텐츠 섹션 */
+  .content-section,
+  .right-section > .content-section:nth-child(3),
+  .right-section > .content-section:nth-child(4),
+  .right-section > .content-section:nth-child(5),
+  .right-section > .content-section:nth-child(6),
+  .right-section > .content-section:nth-child(7) {
+    height: auto !important;
+    padding: 15px 0;
+  }
+
+  /* 프로젝트 컨텐츠 섹션 */
+  .project-content-section,
+  .right-section > .project-content-section:nth-child(1),
+  .right-section > .project-content-section:nth-child(2),
+  .right-section > .project-content-section:nth-child(3),
+  .right-section > .project-content-section:nth-child(4),
+  .right-section > .project-content-section:nth-child(5),
+  .right-section > .project-content-section:nth-child(6),
+  .right-section > .project-content-section:nth-child(7),
+  .right-section > .project-content-section:nth-child(8) {
+    height: auto !important;
+    padding: 15px 0;
+  }
+
+  .section-header h3 {
+    font-size: 15px;
+  }
+
+  .section-detail {
+    font-size: 12px;
+  }
+
+  /* 프로젝트 아이템 */
+  .project-item {
+    font-size: 13px;
+  }
+
+  .project-item .project-title {
+    font-size: 15px;
+  }
+
+  .project-item-list {
+    font-size: 13px;
+    padding: 0 0 0 15px;
+  }
+
+  .project-item-skill {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* 스킬 섹션 */
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-header h3 {
+    font-size: 15px;
+  }
+
+  .skill-detail {
+    font-size: 12px;
+  }
+
+  /* 라이센스 아이템 */
+  .license-item {
+    font-size: 13px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+}
+
+/* 태블릿 반응형 (769px ~ 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .resume-container {
+    width: 100%;
+    max-width: 768px;
+  }
+
+  .left-section {
+    padding: 30px 20px;
+  }
+
+  .right-section {
+    padding: 30px 30px;
+  }
+}
