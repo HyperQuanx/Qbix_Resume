@@ -160,13 +160,13 @@
 
 .header-text .small-text {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
 }
 
 .header-text .name {
   margin: 5px 0 0 0;
-  font-size: 36px;
+  font-size: 40px;
   color: #4682c2;
   font-weight: 700;
 }
@@ -262,7 +262,7 @@
 
 .date {
   color: #999;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* 자격증 */

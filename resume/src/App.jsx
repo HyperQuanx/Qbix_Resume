@@ -68,7 +68,7 @@ function App() {
             <div className="section-item">
               <div className="section-header">
                 <h3>학점은행제 (건국사이버평생교육원)</h3>
-                <span className="date">2024.08 ~</span>
+                <span className="date">2024.08~</span>
               </div>
               <div className="section-detail">
                 <span>컴퓨터공학 전공</span>
@@ -134,7 +134,7 @@ function App() {
             <div className="experience-item">
               <div className="section-header">
                 <h3>(주)서울맥도날드</h3>
-                <span className="date">2019.01 ~ | 4년 7개월</span>
+                <span className="date">2019.01~ | 4년 7개월</span>
               </div>
               <div className="section-detail">
                 <span>
